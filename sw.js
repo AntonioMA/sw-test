@@ -1,5 +1,6 @@
 this.addEventListener('install', function(event) {
   event.waitUntil(
+    this.importScripts('/sw-test/sw2.js');
     caches.open('v1').then(function(cache) {
       return cache.addAll(
         '/sw-test/',
