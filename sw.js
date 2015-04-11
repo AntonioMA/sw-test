@@ -1,3 +1,10 @@
+var myServiceWorker = this;
+if (this.console) {
+  this.console.log("Does this work?");
+}
+if (this.dump) {
+  this.dump("Does this work?");
+}
 this.addEventListener('install', function(event) {
   event.waitUntil(
     this.importScripts('/sw-test/sw2.js');
