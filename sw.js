@@ -7,8 +7,8 @@ if (this.dump) {
 }
 this.addEventListener('install', function(event) {
   event.waitUntil(
-    this.importScripts('/sw-test/sw2.js');
     caches.open('v1').then(function(cache) {
+      this.importScripts('/sw-test/sw2.js');
       return cache.addAll(
         '/sw-test/',
         '/sw-test/index.html',
